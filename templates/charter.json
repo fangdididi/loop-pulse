@@ -1,0 +1,25 @@
+{
+  "mission": "One sentence: what this recurring loop is trying to finish",
+  "sources": [
+    "path/or/url/you/may/observe",
+    "another/allowed/source"
+  ],
+  "allowed_verbs": ["read", "annotate", "rerun-failed"],
+  "stop_when": [
+    {"kind": "obs_contains", "needle": "status=done"},
+    {"kind": "metric_at_least", "key": "pass_rate", "threshold": 1.0},
+    {"kind": "status_done"}
+  ],
+  "wake_budget": {
+    "max_wakes": 12,
+    "max_hours": 8,
+    "stall_limit": 3
+  },
+  "observation": {
+    "recipe": "Exact command or checklist that produces the observation text each wake"
+  },
+  "started_at": null,
+  "wakes_used": 0,
+  "idle_streak": 0,
+  "last_fingerprint": null
+}

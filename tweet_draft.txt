@@ -1,0 +1,5 @@
+新技能 loop-pulse：给周期性 Agent 循环加「唤醒闸门」——每次醒来先对观察取指纹，判定 DELTA/ECHO/STALL/DONE/BUDGET-CUT，只在真有增量且未超预算时才准动手（照看 CI / 盯实验 / 守调研列表）。
+https://github.com/fangdididi/loop-pulse
+
+New skill loop-pulse: a wake gate for recurring agent loops — fingerprint each observation, classify DELTA/ECHO/STALL/DONE/BUDGET-CUT, and only authorize work on real deltas inside budget (CI babysit, experiment watch, research watch).
+https://github.com/fangdididi/loop-pulse

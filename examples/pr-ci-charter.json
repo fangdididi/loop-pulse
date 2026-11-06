@@ -1,0 +1,16 @@
+{
+  "mission": "Babysit CI for pull request 42 until merged, failed-for-real, or budget ends",
+  "sources": ["repo/ci/pr-42.log", "repo/status.json"],
+  "allowed_verbs": ["read", "rerun-failed", "reply-bot"],
+  "stop_when": [
+    {"kind": "obs_contains", "needle": "status=merged"},
+    {"kind": "metric_at_least", "key": "pass_rate", "threshold": 1.0},
+    {"kind": "status_done"}
+  ],
+  "wake_budget": {"max_wakes": 12, "max_hours": 6, "stall_limit": 3},
+  "observation": {"recipe": "tail -n 40 repo/ci/pr-42.log; cat repo/status.json"},
+  "started_at": "2026-11-06T00:00:00Z",
+  "wakes_used": 0,
+  "idle_streak": 0,
+  "last_fingerprint": null
+}

@@ -1,0 +1,3 @@
+pass_rate=0.5
+status=running
+# from repo/ci/pr-42.log
